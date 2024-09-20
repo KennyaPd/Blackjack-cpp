@@ -9,6 +9,6 @@ José Daniel Castro González
 
 Ximena Villavicencio Nuñez
 
-Kenya Peña Padilla
+Kenya Peña Padi
 
 Yeray García Tercero
