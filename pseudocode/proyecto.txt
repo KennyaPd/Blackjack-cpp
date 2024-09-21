@@ -1,0 +1,84 @@
+Nombre del Algoritmo: BlackJack
+
+Declaración de Variables:
+    Entero: jugador, máquina, carta
+    Cadena: mensajeJ, mensajeM
+
+Declaración de Subprocesos:
+
+    Nombre del Subproceso: plus_card(isJugador)
+    Declaración de Variables:
+        Lógico: isJugador
+    1.- Inicio
+    2.- carta = draw_card()
+    3.- Si isJugador Entonces
+            Inicio
+                jugador = jugador + carta
+                mensajeJ += " " + carta
+            Fin
+        Si no
+            Inicio
+                máquina = máquina + carta
+                mensajeM += " " + carta
+            Fin
+    4.- Fin
+
+    Nombre del Subproceso: player_turn()
+    1.- Inicio
+    2.- Escribir mensajeJ
+    3.- Mientras jugador < 21 Hacer
+        Escribir "Desea otra carta? (s/n)"
+        Leer respuesta
+        Si respuesta = "s" Entonces
+            plus_card(jugador, mensajeJ)
+            Escribir mensajeJ
+        Si no
+            Romper
+        Si jugador > 21 Entonces
+            Inicio
+                Escribir "Has Perdido"
+                Romper
+            Fin
+        Si no
+            Si jugador = 21 Entonces
+                Inicio
+                    Escribir "Has ganado Felicidades"
+                    Romper
+                Fin
+    4.- Fin
+
+    Nombre del Subproceso: machine_turn()
+    1.- Inicio
+    2.- Escribir mensajeM
+    3.- Si maquina < jugador Entonces
+            Inicio
+                Escribir "Has Gando Felicidades"
+            Fin
+        Si no
+            Si maquina = jugador Entonces
+                Inicio
+                    Escribir "Ha sido un Empate"
+                Fin
+            Si no
+                Inicio
+                    Escribir "Has Perdido"
+                Fin
+    4.- Fin
+
+    Nombre del Subproceso: initGame()
+    1.- Inicio
+    2.- Escribir "Bienvenido a BlackJack"
+    3.- Hacer jugador=0, máquina=0,
+            mensaje_jugador="El jugador tiene: ",
+            mensajeM="La máquina tiene: "
+    4.- Hacer plus_card(true)
+    5.- Hacer plus_card(true)
+    6.- Hacer plus_card(false)
+    7.- Hacer plus_card(false)
+    8.- Fin
+
+1.- Inicio
+2.- Hacer initGame()
+3.- Hacer player_turn()
+4.- Hacer machine_turn()
+5.- Fin
