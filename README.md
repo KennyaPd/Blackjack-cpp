@@ -1,5 +1,7 @@
 # Blackjack-cpp
-A simple game in C++ 
+Nombre del equipo:
+
+Descripcion: Un simple juego de cartas (BlackJack) hecho en c++
 
 Integrantes del equipo:
 
