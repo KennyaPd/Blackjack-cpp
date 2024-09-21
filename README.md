@@ -1,5 +1,5 @@
 # Blackjack-cpp
-Nombre del equipo:
+Nombre del equipo: EQUIPO mudo
 
 Descripcion: Un simple juego de cartas (BlackJack) hecho en c++
 
