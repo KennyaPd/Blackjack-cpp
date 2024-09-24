@@ -69,7 +69,7 @@ Declaración de Subprocesos:
     1.- Inicio
     2.- Escribir "Bienvenido a BlackJack"
     3.- Hacer jugador=0, máquina=0,
-            mensaje_jugador="El jugador tiene: ",
+            mensajeJ="El jugador tiene: ",
             mensajeM="La máquina tiene: "
     4.- Hacer plus_card(true)
     5.- Hacer plus_card(true)
