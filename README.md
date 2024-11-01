@@ -1,7 +1,7 @@
-# Blackjack-cpp
+# Blackjack-java and cpp
 Nombre del equipo: EQUIPO mudo
 
-Descripcion: Un simple juego de cartas (BlackJack) hecho en c++
+Descripcion: Un simple juego de cartas (BlackJack) hecho en c++, y java 
 
 Integrantes del equipo:
 
