@@ -1,5 +1,9 @@
 import java.util.ArrayList;
 //Añadimos mas del codigo usando el ejemplo de clase
+
+/**
+ * Creamos las figuras
+ */
  enum Suit {
     SPADES('♠'),
     HEARTS('♥'),
@@ -19,7 +23,9 @@ import java.util.ArrayList;
         };
     }
 }
-
+/**
+ * Asignamos valores  a cada carta
+ */
 enum Figure {
     TWO(2, "2"),
     THREE(3, "3"),
@@ -43,7 +49,9 @@ enum Figure {
         this.figureName = figureName;
     }
 }
-
+/**
+ * Creamos las cartas
+ */
 class Card {
     Suit suit;
     Figure figure;
@@ -53,7 +61,9 @@ class Card {
         this.suit = suit;
         this.figure = figure;
     }
-
+    /**
+     * Para mostrar las cartas
+     */
     public String showCard() {
 
         return String.format("%s%c", figure.figureName, suit.suitSymbol);
@@ -71,7 +81,9 @@ class Card {
         return isTaken;
     }
 }
-
+/**
+ * Crecion del mazo
+ */
 class Deck {
     Card[] cards;
 
@@ -85,7 +97,9 @@ class Deck {
             }
         }
     }
-
+    /**
+     * Barajear las cartas
+     */
     void shuffle() {
 
         for (int i = 0; i < cards.length; i++) {
@@ -95,7 +109,9 @@ class Deck {
             cards[randomIndex] = temp;
         }
     }
-
+    /**
+     * Mostrar carta
+     */
     void show() {
 
         for (Card card : cards) {
@@ -113,7 +129,9 @@ class Deck {
         return cards[randomIndex];
     }
 }
-
+/**
+ * Cartas del jugador mas el puntaje
+ */
 class Player {
     String name;
     ArrayList<Card> hand;
@@ -143,11 +161,14 @@ class Player {
         return score;
     }
 }
-
+/**
+ * Inicio del juego
+ */
 class BlackJack {
     Deck deck;
     Player player;
     Player dealer;
+
 
     BlackJack() {
         deck = new Deck();
@@ -155,21 +176,27 @@ class BlackJack {
         player = new Player("Player");
         dealer = new Player("Dealer");
     }
-
+    /**
+     * Cada uno se le da una carta
+     */
     void start() {
         player.drawCard(deck);
         player.drawCard(deck);
         dealer.drawCard(deck);
         dealer.drawCard(deck);
     }
-
+    /**
+     * Enseña la puntuacion de cada uno
+     */
     void showHands() {
         System.out.println("Mano del jugador:");
         player.showHand();
         System.out.println("Mano del dealer:");
         dealer.showHand();
     }
-
+    /**
+     * Muestra al ganador
+     */
     void winner() {
         if (player.getScore() > 21) {
             System.out.println("¡Has perdido, tienes mas de 20!");
@@ -186,7 +213,9 @@ class BlackJack {
         }
     }
 }
-
+/**
+ * Iniciacion del programa
+ */
     public class BlackJackGame {
     public static void main(String[] args) {
         BlackJack blackJack = new BlackJack();
